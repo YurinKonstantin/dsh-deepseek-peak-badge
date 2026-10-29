@@ -1,0 +1,58 @@
+{
+  "name": "dsh-deepseek-peak-badge",
+  "version": "1.0.0",
+  "description": "Composer-dock badge for DeepSeek Harness that shows whether DeepSeek is in its peak pricing window: red during peak hours, yellow 30 minutes before they start, green off-peak.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Konstantin Yurin",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek",
+    "pricing",
+    "peak-hours",
+    "composer",
+    "badge"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YurinKonstantin/dsh-deepseek-peak-badge.git"
+  },
+  "homepage": "https://github.com/YurinKonstantin/dsh-deepseek-peak-badge#readme",
+  "bugs": {
+    "url": "https://github.com/YurinKonstantin/dsh-deepseek-peak-badge/issues"
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.1 <0.3.0-0"
+  },
+  "scripts": {
+    "test": "node test/schedule.test.mjs"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-model-selection"
+      ]
+    }
+  }
+}
