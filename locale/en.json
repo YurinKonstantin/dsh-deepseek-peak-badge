@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "DeepSeek Peak Hours",
+    "description": "Shows below the composer whether the DeepSeek peak-pricing window is active: red during peak hours, yellow 30 minutes before they start."
+  }
+}
