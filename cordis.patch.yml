@@ -1,0 +1,8 @@
+# DeepSeek peak-hours badge bundle.
+#
+# One insert row mounts the Host half; the browser half is declared by the
+# package.json `dsh.client` section and bound to this same row id.
+- insert:
+    - id: deepseek-peak-badge
+      name: 'dsh-deepseek-peak-badge'
+      config: {}
